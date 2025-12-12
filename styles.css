@@ -189,6 +189,49 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
+/* About + Poster split layout */
+.about-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 420px;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.about-main {
+    min-width: 0;
+}
+
+.about-poster {
+    text-align: center;
+}
+
+.poster-link {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.poster-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.poster-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.poster-caption {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
 /* Section Base Styles */
 .section {
     padding: 5rem 0;
@@ -668,6 +711,15 @@ body {
 
     .footer-logos {
         gap: 2rem;
+    }
+
+    .about-split {
+        grid-template-columns: 1fr;
+    }
+
+    .about-poster {
+        max-width: 520px;
+        margin: 0 auto;
     }
 
     .partner-logo {
